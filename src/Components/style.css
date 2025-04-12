@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f293a, #2c4766);
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(8px);
+    color: #fff;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #c288ca;
+}
+
+.input-box {
+    position: relative;
+    margin: 25px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    border: 2px solid #c288ca;
+    border-radius: 40px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    padding: 0 20px;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #c288ca;
+}
+
+.input-box label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: 5px;
+    font-size: 0.8em;
+    color: #c288ca;
+    background: rgba(31, 41, 58, 0.8);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #c288ca;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    color: #1f293a;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #d399d3;
+}
+
+.signup-link {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #c288ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.toast-container {
+    position: fixed;
+    margin-top: -90px;
+    left: 100%;
+    transform: translateX(-0%);
+    z-index: 99999;
+}
+
+.toast-container .react-hot-toast {
+    background: #c288ca;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slide-down 0.5s ease-in-out;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+    }
+    .login-box {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .btn {
+        font-size: 0.9em;
+    }
+}
